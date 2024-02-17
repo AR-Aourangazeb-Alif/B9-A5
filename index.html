@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <header class="flex flex-col items-center gap-8 m-12 h-[85svh]">
+
+        <nav class="container flex items-center justify-between">
+            <div class="text-4xl text-[#030712] font-extrabold">
+                P-Ticket
+            </div>
+            <ul class="flex items-center justify-center gap-16 flex-1 text-lg text-[#030712B3] font-medium">
+                <li>Home</li>
+                <li>About</li>
+                <li>Destination</li>
+                <li>Search</li>
+            </ul>
+            <div class="flex items-center justify-center gap-2 text-xl font-bold text-[#1DD100] bg-[#1DD1001A] border-solid border-[#1d06] border-[1px] rounded-xl min-h-14 min-w-32">
+                Bus
+                <img src="images/bus-icon.png">
+            </div>
+        </nav>
+
+        <section class="container flex items-center flex-col flex-1 rounded-[40px] bg-[url(/images/banner.png)] bg-cover bg-no-repeat bg-bottom">
+            <div class="flex-1 flex items-center justify-center">
+                <div class="w-fit h-fit text-center flex flex-col items-center gap-8">
+                    <h1 class="font-extrabold text-6xl text-white">End-to-End Travel with<br><span class="text-[#1DD100]">P Paribahan</span> </h1>
+                    <p class="font-normal text-lg w-[60%] text-white">
+                        Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
+                    </p>
+                    <button class="bg-[#1DD100] text-[#030712] font-bold text-xl px-[30px] py-[21px] rounded-xl">Buy Tickets</button>
+                </div>
+            </div>
+
+
+            <div class="w-4/5 h-[30%] -mb-[4%] grid grid-cols-3 grid-rows-1 gap-4">
+                <div class="z-10 bg-white rounded-2xl border-solid border-b-[3px] border-[#1dd100]"></div>
+                <div class="z-10 bg-white rounded-2xl border-solid border-b-[3px] border-[#1dd100]"></div>
+                <div class="z-10 bg-white rounded-2xl border-solid border-b-[3px] border-[#1dd100]"></div>
+            </div>
+        </section>
+    </header>
+
+</body>
+
+</html>
