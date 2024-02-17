@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="scroll-smooth">
+<html lang="en" data-theme="light" >
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Document</title>
+
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,13 +15,14 @@
 
 <body>
 
-    <header class="flex flex-col items-center gap-8 m-4 md:m-12 h-[85svh]">
+    <header class="hidden lg:flex flex-col items-center gap-8 m-4 md:m-12 h-[85svh]">
 
         <nav class="container flex items-center justify-between">
             <div class="text-2xl md:text-4xl text-[#030712] font-extrabold">
                 P-Ticket
             </div>
-            <ul class="md:flex items-center justify-center gap-4 lg:gap-16 flex-1 text-lg text-[#030712B3] font-medium hidden">
+            <ul
+                class="md:flex items-center justify-center gap-4 lg:gap-16 flex-1 text-lg text-[#030712B3] font-medium hidden">
                 <li>Home</li>
                 <li>About</li>
                 <li>Destination</li>
@@ -37,21 +39,24 @@
             class="container flex items-center flex-col flex-1 rounded-[40px] bg-[url(/images/banner.png)] bg-cover bg-no-repeat bg-bottom p-2 pt-4">
             <div class="flex-1 flex items-center justify-center">
                 <div class="w-fit h-fit text-center flex flex-col items-center gap-8">
-                    <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl text-white">End-to-End Travel with<br><span
-                            class="text-[#1DD100]">P Paribahan</span> </h1>
+                    <h1 class="font-extrabold text-4xl md:text-5xl lg:text-6xl text-white">End-to-End Travel
+                        with<br><span class="text-[#1DD100]">P Paribahan</span> </h1>
                     <p class="font-normal text-base md:text-lg w-[60%] text-white">
                         Yes, you can run unit tests and view the results directly within the app. The integrated testing
                         features allow for a streamlined .
                     </p>
-                    
+
                     <a href="#buy-tickets">
-                        <button class="bg-[#1DD100] text-[#030712] font-bold text-lg md:text-xl px-[18px] md:px-[30px] py-[15px] md:py-[21px] rounded-xl">Buy Tickets</button>
+                        <button
+                            class="bg-[#1DD100] text-[#030712] font-bold text-lg md:text-xl px-[18px] md:px-[30px] py-[15px] md:py-[21px] rounded-xl">Buy
+                            Tickets</button>
                     </a>
                 </div>
             </div>
 
 
-            <div class="mt-[48px] lg:mt-0 w-4/5 max-h-[450px] md:h-fit lg:-mb-[4%] grid grid-cols-1 lg:grid-cols-3 grid-rows-3 lg:grid-rows-1 gap-4">
+            <div
+                class="mt-[48px] lg:mt-0 w-4/5 max-h-[450px] md:h-fit lg:-mb-[4%] grid grid-cols-1 lg:grid-cols-3 grid-rows-3 lg:grid-rows-1 gap-4">
                 <div
                     class="z-10 bg-white rounded-3xl border-solid border-b-[3px] border-[#1dd100] px-[32px] py-[37px] flex items-center justify-around">
 
@@ -107,80 +112,87 @@
         </section>
     </header>
 
-    <main class="lg:flex flex-col items-center mt-[120px] hidden">
+    <main class="flex flex-col items-center mt-[120px]">
 
-        <section class="container text-center space-y-[48px]">
-            <h1 class="font-bold text-[40px]">Best offers for you</h1>
+        <section class="container text-center h-fit">
+            <h1 class="font-bold text-[40px] mb-[48px]">Best offers for you</h1>
 
-            <div class="h-[220px] grid grid-cols-2 gap-6">
-                <div class="bg-[#FFBF0F] flex rounded-2xl">
-
-                    <div class="h-full w-[52%] flex items-center justify-center">
-
-                        <div>
-                            <p class="text-start">
-                                <span class="font-black text-[40px] text-[#030712CC]">15% OFF</span><br>
-
-                                <span class="font-semibold text-xl text-[#030712CC]">on your next purchase</span><br>
-
-                                <span class="font-medium text-lg text-[#03071280]">use by January 2024</span>
-                            </p>
+            
+            <div class="h-[120px] md:h-[180px] lg:h-[220px] grid grid-cols-1 lg:grid-cols-2 gap-6 mb-[62px]">
+                    <div class="bg-[#FFBF0F] flex rounded-2xl">
+    
+                        <div class="h-full w-[52%] flex items-center justify-center">
+    
+                            <div>
+                                <p class="text-start">
+                                    <span class="font-black text-[40px] text-[#030712CC]">15% OFF</span><br>
+    
+                                    <span class="font-semibold text-xl text-[#030712CC]">on your next purchase</span><br>
+    
+                                    <span class="font-medium text-lg text-[#03071280]">use by January 2024</span>
+                                </p>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <img src="images/cupon-devider.png" class="h-full">
-                    <div class="h-full flex-1 flex items-center justify-center">
-
-                        <div>
-                            <p>
-                                <span class="font-bold text-[32px] text-[#030712]">NEW15</span> <br>
-                                <span class="font-medium text-xl text-[#03071266]">Coupon Code</span>
-                            </p>
+                        <img src="images/cupon-devider.png" class="h-full">
+                        <div class="h-full flex-1 flex items-center justify-center">
+    
+                            <div>
+                                <p>
+                                    <span class="font-bold text-[32px] text-[#030712]">NEW15</span> <br>
+                                    <span class="font-medium text-xl text-[#03071266]">Coupon Code</span>
+                                </p>
+                            </div>
                         </div>
+    
+    
                     </div>
-
-
-                </div>
-
-
-
-                <div class="bg-[#F78C9C] flex rounded-2xl">
-
-                    <div class="h-full w-[52%] flex items-center justify-center">
-
-                        <div>
-                            <p class="text-start">
-                                <span class="font-black text-[40px] text-[#030712CC]">20% OFF</span><br>
-
-                                <span class="font-semibold text-xl text-[#030712CC]">on your next purchase</span><br>
-
-                                <span class="font-medium text-lg text-[#03071280]">use by January 2024</span>
-                            </p>
+    
+    
+    
+                    <div class="bg-[#F78C9C] flex rounded-2xl">
+    
+                        <div class="h-full w-[52%] flex items-center justify-center">
+    
+                            <div>
+                                <p class="text-start">
+                                    <span class="font-black text-[40px] text-[#030712CC]">20% OFF</span><br>
+    
+                                    <span class="font-semibold text-xl text-[#030712CC]">on your next purchase</span><br>
+    
+                                    <span class="font-medium text-lg text-[#03071280]">use by January 2024</span>
+                                </p>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <img src="images/cupon-devider.png" class="h-full">
-                    <div class="h-full flex-1 flex items-center justify-center">
-
-                        <div>
-                            <p>
-                                <span class="font-bold text-[32px] text-[#030712]">Couple 20</span> <br>
-                                <span class="font-medium text-xl text-[#03071266]">Coupon Code</span>
-                            </p>
+                        <img src="images/cupon-devider.png" class="h-full">
+                        <div class="h-full flex-1 flex items-center justify-center">
+    
+                            <div>
+                                <p>
+                                    <span class="font-bold text-[32px] text-[#030712]">Couple 20</span> <br>
+                                    <span class="font-medium text-xl text-[#03071266]">Coupon Code</span>
+                                </p>
+                            </div>
                         </div>
+    
+    
                     </div>
-
-
-                </div>
-
+    
             </div>
+            
 
-            <div class="pt-[14px]">
-                <button class="font-bold text-xl text-[#1DD100] border-solid border-[1px] border-[#1DD100] py-[21px] px-[30px] rounded-xl">See All Offers</button>
-            </div>
+
+            <button
+                class="font-bold text-xl text-[#1DD100] border-solid border-[1px] border-[#1DD100] py-[21px] px-[30px] rounded-xl">
+                SeeAll Offers
+            </button>
+
         </section>
 
-        <section class="mt-[120px] rounded-3xl border-solid border-t-[#1dd100] border-t-[2px] w-full bg-[#F7F8F8] p-[135px]" id="buy-tickets"></section>
+        <section class="mt-[120px] rounded-3xl border-solid border-t-[#1dd100] border-t-[2px] w-full" id="buy-tickets">
+            asdfafd
+        </section>
 
     </main>
 
