@@ -1,13 +1,14 @@
 const seats = document.getElementsByClassName("seats");
 const clickedSeat = [];
+
+const coupons = ["NEW15", "Couple 20"];
+
 let totalPrice = 550*clickedSeat.length;
 let grandTotal = totalPrice;
 
 document.getElementById("total-price").innerText = totalPrice;
 document.getElementById("grand-total").innerText = grandTotal;
 
-const div2 = `<div class="flex justify-end">Economy</div>`;
-const div3 = `<div class="flex justify-end">550</div>`;
 
 document.getElementById("seatCounter").innerText = clickedSeat.length;
 document.getElementById("seat-left").innerText = 40-clickedSeat.length;
@@ -15,6 +16,8 @@ document.getElementById("seat-left").innerText = 40-clickedSeat.length;
 for (let seat of seats) {
 
     seat.addEventListener("click", function () {
+        
+
         if ((!clickedSeat.includes(seat.innerText)) && clickedSeat.length<4) {
             seat.style.backgroundColor = "#1DD100";
             seat.style.color="white";
@@ -23,12 +26,17 @@ for (let seat of seats) {
             document.getElementById("seatCounter").innerText = clickedSeat.length;
             document.getElementById("seat-left").innerText = 40-clickedSeat.length;
 
-            const div1 = `<div>${seat.innerText}</div>`;
+            console.log(seat.innerText);
 
-            document.getElementById("selected-seat-list").innerHTML += `${div1}`
-            document.getElementById("selected-seat-list").innerHTML += `${div2}`;
-            document.getElementById("selected-seat-list").innerHTML += `${div3}`;
+            let div = `
+            <div class="grid grid-cols-3" id="${seat.innerText}">
+                <div>${seat.innerText}</div>
+                <div class="flex justify-end">Economoy</div>
+                <div class="flex justify-end">550</div>
+            </div>
+            `;
 
+            document.getElementById("selected-seat-list").innerHTML += `${div}`
 
             totalPrice = 550*clickedSeat.length;
             grandTotal = totalPrice;
@@ -37,10 +45,53 @@ for (let seat of seats) {
             document.getElementById("grand-total").innerText = grandTotal;
 
 
-            console.log(div1);
+            console.log(clickedSeat)
 
 
-            console.log(clickedSeat);
         }
+
+
+        if(clickedSeat.length >= 1){
+
+            document.getElementById("form-button").style.backgroundColor = "#1DD100";
+
+            document.getElementById("form-button").removeAttribute("disabled");
+
+        }
+
+        if(clickedSeat.length === 4){
+            document.getElementById("coupon").style.backgroundColor = "white";
+            document.getElementById("coupon-container").style.backgroundColor = "white";
+            document.getElementById("coupon-button").style.backgroundColor = "#1cd100";
+
+            document.getElementById("coupon").removeAttribute("disabled");
+            document.getElementById("coupon-button").removeAttribute("disabled");
+
+        }
+
     })
 }
+
+document.getElementById("coupon-button").addEventListener("click", function(){
+    const coupon = document.getElementById("coupon").value;
+
+    document.getElementById("coupon").value = "";
+
+    if(coupons.includes(coupon)){
+        document.getElementById("coupon-container").style.display = "none";
+        document.getElementById("total-price-container").style.borderBottom = "solid 1px #03071233";
+
+        if(coupon === coupons[0]){
+            grandTotal = totalPrice*0.85;
+            document.getElementById("grand-total").innerHTML = `${grandTotal} <span class="text-base font-normal text-red-500">(-15%)</span>`;
+            document.getElementById("cupon-check-alert").innerText = ""
+        }else if(coupon === coupons[1]){
+            grandTotal = totalPrice*0.80;
+            document.getElementById("grand-total").innerHTML = `${grandTotal} <span class="text-base font-normal text-red-500">(-20%)</span>`;
+            document.getElementById("cupon-check-alert").innerText = ""
+        }
+
+    }else{
+        document.getElementById("cupon-check-alert").innerText = "Invalid Coupon*";
+    }
+})

@@ -197,7 +197,7 @@
 
         </section>
 
-        <div class="mt-[120px] rounded-3xl bg-[#F7F8F8] border-solid border-t-[#1dd100] border-t-[2px] w-full pt-12 flex flex-col items-center justify-center"
+        <div class="mt-[120px] rounded-3xl bg-[#F7F8F8] border-solid border-t-[#1dd100] border-t-[2px] w-full pt-12 px-2 md:px-4 flex flex-col items-center justify-center"
             id="buy-tickets">
 
 
@@ -261,7 +261,7 @@
 
                 </div>
 
-                <img src="images/info-devider.png">
+                <img src="images/info-devider.png" class="lg:h-full">
 
                 <div class="h-full flex-1 flex items-center justify-center">
 
@@ -281,9 +281,9 @@
             </section>
 
 
-            <section class="container bg-white rounded-2xl mt-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 py-[32px] px-2">
+            <section class="container bg-white rounded-2xl mt-10 grid grid-cols-1 lg:grid-cols-3 grid-rows-1 py-[32px] px-2">
 
-                <div class="col-span-2 p-[33px] border-dashed border-b-[3px] md:border-b-0 md:border-r-[3px] border-[#0307124D]">
+                <div class="col-span-2 p-[33px] border-dashed border-b-[3px] lg:border-b-0 lg:border-r-[3px] border-[#0307124D]">
                     <div>
 
                         <div
@@ -363,11 +363,11 @@
                             </div>
 
                             <div
-                                class="grid grid-cols-3 py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[2px]" id="selected-seat-list">
+                                class="py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[1px]" id="selected-seat-list">
                                 
                             </div>
 
-                            <div class="flex items-center justify-between font-medium text-base py-[16px]">
+                            <div class="flex items-center justify-between font-medium text-base py-[16px]" id="total-price-container">
                                 <div>
                                     Total Price
                                 </div>
@@ -377,15 +377,16 @@
                                 </div>
                             </div>
 
-                            <div class="flex w-full h-auto bg-white justify-between items-center rounded-xl p-[8px]">
+                            <div class="flex w-full h-auto bg-gray-300 justify-between items-center rounded-xl p-[8px]" id="coupon-container">
 
-                                <input type="text" name="coupon" id="coupon" class="outline-none w-4/5"
-                                    placeholder="Have any copupon?">
+                                <input type="text" name="coupon" id="coupon" class="outline-none w-4/5 bg-gray-300"
+                                    placeholder="Have any copupon?" disabled>
 
                                 <button
-                                    class="bg-[#1DD100] text-white font-semibold text-sm md:text-base py-[8px] md:py-[10px] px-[15px] md:px-[17px] rounded-xl">Apply</button>
+                                    class="bg-[#1cd10079] text-white font-semibold text-sm md:text-base py-[8px] md:py-[10px] px-[15px] md:px-[17px] rounded-xl" id="coupon-button" disabled>Apply</button>
 
                             </div>
+                            <span id="cupon-check-alert" class="text-red-600 mt-1"></span>
 
                             <div class="font-medium text-base flex items-center justify-between pt-[24px]">
                                 <div>Grand Total</div>
@@ -399,7 +400,7 @@
                     </div>
 
 
-                    <form class="grid grid-rows-4 w-full flex-1 gap-4 px-4 max-h-[400px]">
+                    <div class="grid grid-rows-4 w-full flex-1 gap-4 px-4 max-h-[400px]">
 
                         <div class="flex flex-col text-[#030712] font-semibold">Passenger Name*
                             <input type="text" class="w-full flex-1 border-solid border-[2px] border-[#0307121A] outline-none p-4 rounded-xl" placeholder="Enter your name" required>
@@ -415,7 +416,7 @@
                         </div>
 
                         <div class="flex flex-col">
-                            <button type="submit" class="w-full h-4/5 rounded-xl font-extrabold text-xl text-white bg-[#1DD100]">Next</button>
+                            <button type="submit" class="w-full h-4/5 rounded-xl font-extrabold text-xl text-white bg-[#1DD10079]" disabled id="form-button">Next</button>
                         </div>
 
                         <div class="flex justify-between text-[#03071299]">
@@ -423,7 +424,7 @@
                             <a href="">Cancellation Policy</a>
                         </div>
 
-                    </form>
+                    </div>
 
 
 

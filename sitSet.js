@@ -12,10 +12,10 @@ for(let i = 0; i < 40; i++){
     const spanOne = document.createElement("span");
     const spanTwo = document.createElement("span");
 
-    spanOne.classList.add("bg-[#F7F8F8]", "rounded-lg", "flex", "items-center", "justify-center", "transition-all", "cursor-pointer", "seats");
+    spanOne.classList.add("bg-[#F7F8F8]", "rounded-lg", "flex", "items-center", "justify-center", "transition-all", "cursor-pointer", "seats", "text-[#03071280]");
     spanOne.innerText = `${rowArray[rowID]}${sitNumber+1}`;
 
-    spanTwo.classList.add("justify-center", "items-center", "flex", "cursor-pointer");
+    spanTwo.classList.add("justify-center", "items-center", "flex", "text-[#03071280]", "cursor-pointer");
     spanTwo.innerText = `${rowArray[rowID]}`;
 
     if(sitNumber === 0 || sitNumber === 1){
