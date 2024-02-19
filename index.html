@@ -281,14 +281,17 @@
             </section>
 
 
-            <section class="container bg-white rounded-2xl mt-10 grid grid-cols-3 grid-rows-1 py-[32px] px-2">
+            <section class="container bg-white rounded-2xl mt-10 grid grid-cols-1 md:grid-cols-3 grid-rows-1 py-[32px] px-2">
 
-                <div class="col-span-2 p-[33px] border-dashed border-r-[3px] border-[#0307124D]">
+                <div class="col-span-2 p-[33px] border-dashed border-b-[3px] md:border-b-0 md:border-r-[3px] border-[#0307124D]">
                     <div>
 
-                        <div class="font-semibold text-[24px] pb-[20px] border-dashed border-b-[2px] border-[#0307124D]">Select Your Seat</div>
+                        <div
+                            class="font-semibold text-[24px] pb-[20px] border-dashed border-b-[2px] border-[#0307124D]">
+                            Select Your Seat</div>
 
-                        <div class="flex items-center justify-between text-lg font-medium py-[20px] border-dashed border-b-[2px] border-[#0307124D]">
+                        <div
+                            class="flex items-center justify-between text-lg font-medium py-[20px] border-dashed border-b-[2px] border-[#0307124D]">
 
                             <div class="flex items-center text-[#03071280]">
                                 <img src="images/seat-gray.png">
@@ -314,14 +317,14 @@
                         </div>
 
                     </div>
-                
+
 
                     <div class="grid grid-cols-11 h-10 min-h-[670px]">
 
                         <div class="grid grid-cols-1 grid-rows-10 gap-4" id="row-id">
-                            
+
                         </div>
-    
+
                         <div class="col-span-10 grid grid-cols-2 gap-8">
                             <div class="grid grid-cols-2 grid-rows-10 gap-4" id="sit-1">
 
@@ -330,76 +333,110 @@
 
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
 
 
 
-                <div class="">
+                <div class="flex flex-col">
 
-                    <div>
 
-                        <div class="p-[33px]">
 
-                            <div class="font-semibold text-[24px] pb-[20px] border-dashed border-b-[2px] border-[#0307124D]">Select Your Seat</div>
-    
-                            
-                            <div class="mt-4 w-full p-[32px] bg-[#F7F8F8] rounded-xl">
+                    <div class="p-[33px]">
 
-                                <div class="grid grid-cols-3 pb-[16px] border-dashed border-b-[2px] border-[#03071233] text-[#030712] font-medium">
-                                    <div>
-                                        Seat<span class="ml-1 text-[12px] text-white bg-[#1DD100] px-2 rounded-full">4</span>
-                                    </div>
-                                    <div class="flex justify-center">Class</div>
-                                    <div class="flex flex-row-reverse">Price</div>
+                        <div
+                            class="font-semibold text-[24px] pb-[20px] border-dashed border-b-[2px] border-[#0307124D]">
+                            Select Your Seat</div>
+
+
+                        <div class="mt-4 w-full p-[32px] bg-[#F7F8F8] rounded-xl">
+
+                            <div
+                                class="grid grid-cols-3 pb-[16px] border-dashed border-b-[2px] border-[#03071233] text-[#030712] font-medium">
+                                <div>
+                                    Seat<span
+                                        class="ml-1 text-[12px] text-white bg-[#1DD100] px-2 rounded-full">4</span>
+                                </div>
+                                <div class="flex justify-center">Class</div>
+                                <div class="flex flex-row-reverse">Price</div>
+                            </div>
+
+                            <div
+                                class="grid grid-cols-3 py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[2px] min-h-[200px]">
+                                <div>A1</div>
+                                <div class="flex justify-end">Economoy</div>
+                                <div class="flex flex-row-reverse">550</div>
+                                <div>A2</div>
+                                <div class="flex justify-end">Economoy</div>
+                                <div class="flex flex-row-reverse">550</div>
+                                <div>A3</div>
+                                <div class="flex justify-end">Economoy</div>
+                                <div class="flex flex-row-reverse">550</div>
+                                <div>A4</div>
+                                <div class="flex justify-end">Economoy</div>
+                                <div class="flex flex-row-reverse">550</div>
+                            </div>
+
+                            <div class="flex items-center justify-between font-medium text-base py-[16px]">
+                                <div>
+                                    Total Price
                                 </div>
 
-                                <div class="grid grid-cols-3 py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[2px] min-h-[200px]">
-                                    <div>A1</div>
-                                    <div class="flex justify-end">Economoy</div>
-                                    <div class="flex flex-row-reverse">550</div>
-                                    <div>A2</div>
-                                    <div class="flex justify-end">Economoy</div>
-                                    <div class="flex flex-row-reverse">550</div>
-                                    <div>A3</div>
-                                    <div class="flex justify-end">Economoy</div>
-                                    <div class="flex flex-row-reverse">550</div>
-                                    <div>A4</div>
-                                    <div class="flex justify-end">Economoy</div>
-                                    <div class="flex flex-row-reverse">550</div>
+                                <div>
+                                    BDT 1100
                                 </div>
+                            </div>
 
-                                <div class="flex items-center justify-between font-medium text-base py-[16px]">
-                                    <div>
-                                        Total Price
-                                    </div>
+                            <div class="flex w-full h-auto bg-white justify-between items-center rounded-xl p-[8px]">
 
-                                    <div>
-                                        BDT 1100
-                                    </div>
-                                </div>
+                                <input type="text" name="coupon" id="coupon" class="outline-none w-4/5"
+                                    placeholder="Have any copupon?">
 
-                                <div class="flex w-full h-auto bg-white justify-between items-center rounded-xl p-[8px]">
-
-                                    <input type="text" name="coupon" id="coupon" class="outline-none w-4/5" placeholder="Have any copupon?">
-                                    
-                                    <button class="bg-[#1DD100] text-white font-semibold text-base py-[10px] px-[17px] rounded-xl">Apply</button>
-                                    
-                                </div>
-
-                                <div class="font-medium text-base flex items-center justify-between pt-[24px]">
-                                    <div>Grand Total</div>
-                                    <div>BDT 1100</div>
-                                </div>
+                                <button
+                                    class="bg-[#1DD100] text-white font-semibold text-sm md:text-base py-[8px] md:py-[10px] px-[15px] md:px-[17px] rounded-xl">Apply</button>
 
                             </div>
 
-    
+                            <div class="font-medium text-base flex items-center justify-between pt-[24px]">
+                                <div>Grand Total</div>
+                                <div>BDT 1100</div>
+                            </div>
+
                         </div>
-    
+
 
                     </div>
+
+
+                    <form class="grid grid-rows-4 w-full flex-1 gap-4 px-4">
+
+                        <div class="flex flex-col text-[#030712] font-semibold">Passenger Name*
+                            <input type="text" class="w-full flex-1 border-solid border-[2px] border-[#0307121A] outline-none p-4 rounded-xl" placeholder="Enter your name" required>
+                        </div>
+                        
+
+                        <div class="flex flex-col text-[#030712] font-semibold">Phone Number*
+                            <input type="number" class="w-full flex-1 border-solid border-[2px] border-[#0307121A] outline-none p-4 rounded-xl" placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="flex flex-col text-[#030712] font-semibold">Email ID
+                            <input type="email" class="w-full flex-1 border-solid border-[2px] border-[#0307121A] outline-none p-4 rounded-xl" placeholder="Enter your email id">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <button type="submit" class="w-full h-4/5 rounded-xl font-extrabold text-xl text-white bg-[#1DD100]">Next</button>
+                        </div>
+
+                        <div class="flex justify-between text-[#03071299]">
+                            <a href="">Terms and Conditions</a>
+                            <a href="">Cancellation Policy</a>
+                        </div>
+
+                    </form>
+
+
+
 
                 </div>
 
