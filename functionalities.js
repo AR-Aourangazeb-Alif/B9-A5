@@ -100,7 +100,7 @@ document.getElementById("phone-number").addEventListener("keyup", function () {
 
         count++;
 
-        if (count>=1) {
+        if (count >= 1) {
             document.getElementById("form-button").style.backgroundColor = "#1DD10079";
 
             document.getElementById("form-button").setAttribute("disabled", "")
@@ -143,14 +143,17 @@ document.getElementById("form-button").addEventListener("click", function () {
     const name = document.getElementById("name").value;
     const phoneNumber = document.getElementById("phone-number").value;
 
-    if(name && phoneNumber){
+
+
+    if (phoneNumber) {
         document.getElementById("nex-pressed").style.display = "flex";
+
     }
 
 })
 
-document.getElementById("continue-button").addEventListener("click", function(){
-    
+document.getElementById("continue-button").addEventListener("click", function () {
+
     document.getElementById("nex-pressed").style.display = "none";
 
 })
