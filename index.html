@@ -219,7 +219,7 @@
 
                         <div class="flex items-center p-[17px] bg-[#1DD10026] rounded-xl gap-2">
                             <img src="images/seat-green.png">
-                            <span class="text-[#1DD100] font-medium text-lg">40 Seats left</span>
+                            <span class="text-[#1DD100] font-medium text-lg"><span id="seat-left"></span> Seats left</span>
                         </div>
 
 
@@ -339,7 +339,7 @@
 
 
 
-                <div class="flex flex-col">
+                <div class="flex flex-col justify-between">
 
 
 
@@ -356,26 +356,15 @@
                                 class="grid grid-cols-3 pb-[16px] border-dashed border-b-[2px] border-[#03071233] text-[#030712] font-medium">
                                 <div>
                                     Seat<span
-                                        class="ml-1 text-[12px] text-white bg-[#1DD100] px-2 rounded-full">4</span>
+                                        class="ml-1 text-[12px] text-white bg-[#1DD100] px-2 rounded-full" id="seatCounter"></span>
                                 </div>
                                 <div class="flex justify-center">Class</div>
                                 <div class="flex flex-row-reverse">Price</div>
                             </div>
 
                             <div
-                                class="grid grid-cols-3 py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[2px] min-h-[200px]">
-                                <div>A1</div>
-                                <div class="flex justify-end">Economoy</div>
-                                <div class="flex flex-row-reverse">550</div>
-                                <div>A2</div>
-                                <div class="flex justify-end">Economoy</div>
-                                <div class="flex flex-row-reverse">550</div>
-                                <div>A3</div>
-                                <div class="flex justify-end">Economoy</div>
-                                <div class="flex flex-row-reverse">550</div>
-                                <div>A4</div>
-                                <div class="flex justify-end">Economoy</div>
-                                <div class="flex flex-row-reverse">550</div>
+                                class="grid grid-cols-3 py-[16px] gap-[16px] text-[#03071299] border-[#03071233] border-solid border-b-[2px]" id="selected-seat-list">
+                                
                             </div>
 
                             <div class="flex items-center justify-between font-medium text-base py-[16px]">
@@ -384,7 +373,7 @@
                                 </div>
 
                                 <div>
-                                    BDT 1100
+                                    BDT <span id="total-price"></span>
                                 </div>
                             </div>
 
@@ -400,7 +389,8 @@
 
                             <div class="font-medium text-base flex items-center justify-between pt-[24px]">
                                 <div>Grand Total</div>
-                                <div>BDT 1100</div>
+                                <div>BDT <span id="grand-total"></span>
+                            </div>
                             </div>
 
                         </div>
@@ -409,7 +399,7 @@
                     </div>
 
 
-                    <form class="grid grid-rows-4 w-full flex-1 gap-4 px-4">
+                    <form class="grid grid-rows-4 w-full flex-1 gap-4 px-4 max-h-[400px]">
 
                         <div class="flex flex-col text-[#030712] font-semibold">Passenger Name*
                             <input type="text" class="w-full flex-1 border-solid border-[2px] border-[#0307121A] outline-none p-4 rounded-xl" placeholder="Enter your name" required>

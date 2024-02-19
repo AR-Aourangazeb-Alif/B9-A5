@@ -12,7 +12,7 @@ for(let i = 0; i < 40; i++){
     const spanOne = document.createElement("span");
     const spanTwo = document.createElement("span");
 
-    spanOne.classList.add("bg-[#F7F8F8]", "rounded-lg", "flex", "items-center", "justify-center", "transition-all", "cursor-pointer", "hover:bg-[#bcbcbc85]");
+    spanOne.classList.add("bg-[#F7F8F8]", "rounded-lg", "flex", "items-center", "justify-center", "transition-all", "cursor-pointer", "seats");
     spanOne.innerText = `${rowArray[rowID]}${sitNumber+1}`;
 
     spanTwo.classList.add("justify-center", "items-center", "flex", "cursor-pointer");
@@ -31,7 +31,6 @@ for(let i = 0; i < 40; i++){
     
     if(sitNumber === 3){
         document.getElementById("row-id").appendChild(spanTwo);
-        console.log(rowID);
         rowID++;
         
     }
