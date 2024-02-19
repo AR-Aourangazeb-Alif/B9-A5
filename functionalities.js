@@ -1,5 +1,5 @@
 const seats = document.getElementsByClassName("seats");
-const clickedSeat = [];
+let clickedSeat = [];
 
 let cellClicked = false;
 let numberTyped = false;
@@ -141,6 +141,14 @@ document.getElementById("form-button").addEventListener("click", function () {
     const name = document.getElementById("name").value;
     const phoneNumber = document.getElementById("phone-number").value;
 
-    console.log(name, phoneNumber);
+    if(name && phoneNumber){
+        document.getElementById("nex-pressed").style.display = "flex";
+    }
 
+})
+
+document.getElementById("continue-button").addEventListener("click", function(){
+    
+    document.getElementById("nex-pressed").style.display = "none";
+    
 })
