@@ -16,6 +16,8 @@ document.getElementById("grand-total").innerText = grandTotal;
 document.getElementById("seatCounter").innerText = clickedSeat.length;
 document.getElementById("seat-left").innerText = 40 - clickedSeat.length;
 
+
+
 for (let seat of seats) {
 
     seat.addEventListener("click", function () {
@@ -150,5 +152,5 @@ document.getElementById("form-button").addEventListener("click", function () {
 document.getElementById("continue-button").addEventListener("click", function(){
     
     document.getElementById("nex-pressed").style.display = "none";
-    
+
 })
